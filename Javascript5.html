@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:400px;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        #login-button {
+            background-color: #3897f0;
+            width: 95%;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Instagram</h1>
+        </div>
+        <div class="form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="login-button">Log In</button>
+        </div>
+        <div class="signup-link">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginButton = document.getElementById("login-button");
+
+            loginButton.addEventListener("click", function () {
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                console.log("Username: " + username);
+                console.log("Password: " + password);
+            });
+        });
+    </script>
+</body>
+</html>

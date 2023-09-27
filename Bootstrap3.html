@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #hobby {
+            height: 100px; 
+            resize: vertical;
+            overflow-y: auto; 
+        }
+      .container
+      {
+        border-width:2px;
+        border-style:solid;
+        border-color:white;
+        width:50%;
+      }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 bg-light" >
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registration Form</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                  <label for="name">Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="hobby">Write Your Hobby:</label>
+                    <input class="form-control" type="text"  name="hobby" >
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

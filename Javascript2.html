@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-2</title>
+    <style>
+        /* Center-align the container (body) content */
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+    
+        /* Style the input field and button */
+        #inputString, button {
+          margin-bottom: 10px;
+          padding: 5px;
+        }
+      </style>
+</head>
+<body>
+    <h1>Sort Letters in Alphabetical Order</h1>
+
+  <input type="text" id="inputString" placeholder="Enter a string">
+  <button onclick="sortAlphabetically()">Sort</button>
+
+  <p id="sortedResult"></p>
+
+  <script>
+    function sortAlphabetically() {
+      
+      const inputString = document.getElementById("inputString").value;
+
+      
+      const sortedString = inputString.split('').sort().join('');
+
+      document.getElementById("sortedResult").textContent = "Sorted String: " + sortedString;
+    }
+</Script>
+</body>
+</html>

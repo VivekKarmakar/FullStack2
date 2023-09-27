@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-3</title>
+    <style>
+        body
+        {
+          margin-top:100px;
+          margin-left:380px;
+        }
+        .container
+        {
+          border-width:2px;
+          border-style:solid;
+          width:35%;
+          height:200px;
+          padding:80px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <lable>1st  Number: </label>
+        <input type="number" id="num1">
+      <br>
+      <br>
+        <lable>2nd Number:</label>
+        <input type="number" id="num2" >
+        <br><br>
+    
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+    
+        <h2>The Result is :</h2>
+        <p id="result"></p>
+      </div>
+    
+        <script>
+            function multiply() {
+                calculate("multiply");
+            }
+    
+            function divide() {
+                calculate("divide");
+            }
+    
+            function calculate(operation) {
+                
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+    
+                
+                if (isNaN(num1) || isNaN(num2)) {
+                    alert("Please enter valid numbers.");
+                    return;
+                }
+    
+                
+                var result;
+                if (operation === "multiply") {
+                    result = num1 * num2;
+                } else if (operation === "divide") {
+                    if (num2 === 0) {
+                        alert("Cannot divide by zero.");
+                        return;
+                    }
+                    result = num1 / num2;
+                } else {
+                    alert("Invalid operation selected.");
+                    return;
+                }
+    
+                
+                document.getElementById("result").innerHTML =  result;
+            }
+        </script>
+</body>
+</html>

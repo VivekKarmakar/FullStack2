@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-4</title>
+    <style>
+        body
+        {
+            margin-top:150px;
+            margin-left: 130px;
+        }
+        .container
+        {
+            border-width: 2px ;
+            border-style: solid;
+            border-color: aliceblue;
+            width:50%;
+            height: 190px;
+            padding-top: 60px;
+            padding-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" onclick="currentDate()">Show Date</button>
+    <p id="res"></p>
+    <br>
+    <button type="button" onclick="currentTime()">Show Time</button>
+    <p id="res1"></p>
+    </div>
+    
+    <script>
+        function currentDate() {
+            var currentDateTime = new Date();
+            document.getElementById('res').innerHTML =  currentDateTime.toDateString();
+        }
+        
+        function currentTime() {
+            var currentDateTime = new Date();
+            document.getElementById('res1').innerHTML =Date();
+        }
+    </script>
+</body>
+</html>
